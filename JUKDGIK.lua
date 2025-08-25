@@ -17,8 +17,19 @@ Enabled = true,
 FolderName = "Forsakengodhub",
 FileName = "Settings"
 },
-Discord = {Enabled = false},
-KeySystem = false
+Discord = {Enabled = false,
+           lnvite = "https://discord.gg/uCFYNWjg"
+           RememberJoins = true
+        },
+KeySystem = true 
+KeySystem = {
+    Title = "KeySystem",
+    Subtitle = "Enter for key"
+    Note = "Join Discord for key"
+    FileName = "Key Forsaken god hub"
+    Savsekey = true, -- Enable key saving
+    GrabKeyFromSite = false,
+    key = {"The KeySystem for Forsaken god hub"}
 })
 
 local AutoBlockTab = Window:CreateTab("Auto Block", 4483362458)
