@@ -17,21 +17,9 @@ Enabled = true,
 FolderName = "Forsakengodhub",
 FileName = "Settings"
 },
-Discord = {Enabled = true,
-           lnvite = "https://discord.gg/uCFYNWjg"
-           RememberJoins = true
-        },
-KeySystem = true
-KeySystem = {
-    Title = "KeySystem",
-    Subtitle = "Enter for key"
-    Note = "Join Discord for key"
-    FileName = "Key Forsaken god hub"
-    Savsekey = true, -- Enable key saving
-    GrabKeyFromSite = false,
-    key = {"The KeySystem for Forsaken god hub"}
+Discord = {Enabled = false},
+KeySystem = false
 })
-
 local AutoBlockTab = Window:CreateTab("Auto Block", 4483362458)
 local PredictiveTab = Window:CreateTab("Predictive Auto Block", 4483362458)
 local FakeBlockTab = Window:CreateTab("Fake Block", 4483362458)
@@ -136,7 +124,7 @@ end
 
 -- GUI Toggles
 AutoBlockTab:CreateToggle({
-Name = "Auto Block (Animation)",
+Name = "ออโต้บล็อก ( ช้า )",
 CurrentValue = false,
 Flag = "AutoBlockAnimation",
 Callback = function(Value) autoBlockOn = Value end
@@ -144,7 +132,7 @@ Callback = function(Value) autoBlockOn = Value end
 
 -- Rayfield toggle for Auto Block (Audio)
 AutoBlockTab:CreateToggle({
-    Name = "Auto Block (Audio)",
+    Name = "ออโต้บล็อก ( เร็ว )",
     CurrentValue = false,
     Flag = "AutoBlockAudio",
     Callback = function(state)
@@ -217,32 +205,6 @@ PredictiveTab:CreateSlider({
 PredictiveTab:CreateParagraph({
     Title = "Edge Killer",
     Content = "how many secs until it blocks (resets when killer gets out of range)"
-})
-
-SettingsTab:CreateButton({
-           Name = "Check key Status",
-           Callback = function()
-                      -- Check if key is saved
-                      local keySaved = isfile("key")
-                      Reyfield:Notify({
-                           Title = "key Status"
-                           Connect = keySaved and "key is saved" ro "No key saved", 
-                           Duration = 3,
-                      })  
-                   end,
--- Reapply styles periodically to ensure they stick
-task.spawn(function()
-while task.wait(5) do
-applyButtonStyles()
-  end
-end)
-
---Final notification
-task.wait(1)
-Rayfield: Notify({
-  Title = "key Loaded",
-  Content = "Enjoy your key!",
-  Duration 4,
 })
 
 })
