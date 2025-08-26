@@ -219,6 +219,18 @@ PredictiveTab:CreateParagraph({
     Content = "how many secs until it blocks (resets when killer gets out of range)"
 })
 
+SettingsTab:CreateButton({
+           Name = "Check key Status",
+           Callback = function()
+                      -- Check if key is saved
+                      local keySaved = isfile("key")
+                      Reyfield:Notify({
+                           Title = "key Status"
+                           Connect = keySaved and "key is saved" ro "No key saved", 
+                           Duration = 3,
+                      })  
+                   end,
+})
 FakeBlockTab:CreateButton({
     Name = "Load Fake Block",
     Callback = function()
