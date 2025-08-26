@@ -9,17 +9,18 @@ local Humanoid, Animator
 
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
 local Window = Rayfield:CreateWindow({
-Name = "Forsakengodhub",
-LoadingTitle = "Forsaken god hub",
-LoadingSubtitle = "by kvsna3545-pixel",
+Name = "Forsaken god hub v.9.8",
+LoadingTitle = "Forsaken god hub v.9.8",
+LoadingSubtitle = "by OPPORTUNITY",
 ConfigurationSaving = {
 Enabled = true,
-FolderName = "Forsakengodhub",
+FolderName = "Forsakengodhub v.9.8",
 FileName = "Settings"
 },
 Discord = {Enabled = false},
 KeySystem = false
 })
+
 local AutoBlockTab = Window:CreateTab("Auto Block", 4483362458)
 local PredictiveTab = Window:CreateTab("Predictive Auto Block", 4483362458)
 local FakeBlockTab = Window:CreateTab("Fake Block", 4483362458)
@@ -124,7 +125,7 @@ end
 
 -- GUI Toggles
 AutoBlockTab:CreateToggle({
-Name = "ออโต้บล็อก ( ช้า )",
+Name = "Auto Block (Animation)",
 CurrentValue = false,
 Flag = "AutoBlockAnimation",
 Callback = function(Value) autoBlockOn = Value end
@@ -132,7 +133,7 @@ Callback = function(Value) autoBlockOn = Value end
 
 -- Rayfield toggle for Auto Block (Audio)
 AutoBlockTab:CreateToggle({
-    Name = "ออโต้บล็อก ( เร็ว )",
+    Name = "Auto Block (Audio)",
     CurrentValue = false,
     Flag = "AutoBlockAudio",
     Callback = function(state)
@@ -207,7 +208,6 @@ PredictiveTab:CreateParagraph({
     Content = "how many secs until it blocks (resets when killer gets out of range)"
 })
 
-})
 FakeBlockTab:CreateButton({
     Name = "Load Fake Block",
     Callback = function()
