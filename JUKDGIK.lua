@@ -230,6 +230,21 @@ SettingsTab:CreateButton({
                            Duration = 3,
                       })  
                    end,
+-- Reapply styles periodically to ensure they stick
+task.spawn(function()
+while task.wait(5) do
+applyButtonStyles()
+  end
+end)
+
+--Final notification
+task.wait(1)
+Rayfield: Notify({
+  Title = "key Loaded",
+  Content = "Enjoy your key!",
+  Duration 4,
+})
+
 })
 FakeBlockTab:CreateButton({
     Name = "Load Fake Block",
