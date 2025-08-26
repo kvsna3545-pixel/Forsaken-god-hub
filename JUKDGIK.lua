@@ -17,11 +17,11 @@ Enabled = true,
 FolderName = "Forsakengodhub",
 FileName = "Settings"
 },
-Discord = {Enabled = false,
+Discord = {Enabled = true,
            lnvite = "https://discord.gg/uCFYNWjg"
            RememberJoins = true
         },
-KeySystem = true 
+KeySystem = true
 KeySystem = {
     Title = "KeySystem",
     Subtitle = "Enter for key"
