@@ -15,8 +15,8 @@ local TestService = game:GetService("TestService")
 
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
 local Window = Rayfield:CreateWindow({
-Name = "AutoBlock",
-LoadingTitle = "Forsakengodhub",
+Name = "Forsaken god hub",
+LoadingTitle = "Loading",
 LoadingSubtitle = "by kvsna3545",
 ConfigurationSaving = {
 Enabled = true,
